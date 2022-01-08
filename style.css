@@ -1,0 +1,596 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,500;1,400&family=Montserrat:ital,wght@0,300;1,400;1,700&family=Open+Sans:ital,wght@0,400;0,700;1,300&family=Roboto+Slab:wght@300;400;800&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,500&display=swap');
+
+* {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration:none;
+}
+ul {
+    list-style: none;
+}
+html{
+    font-size:16px;
+    scroll-behavior:smooth;
+    font-family:"montserrat", sans-serif;
+}
+.container{
+    min-height:100vh;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+#hero{
+    background-image:url('a89d1660e8c5af1c01452e843f211684.jpg');
+    background-size:cover;
+    background-position: top center;
+    height:100vh;
+    width:100%;
+    position:relative;
+    z-index:1;
+    
+}
+
+#hero::after{
+    content:"";
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100vh;
+    background:black;
+    opacity:.7;
+    z-index:-1;
+}
+#hero h1{
+    color:transparent;
+    width:fit-content;
+    color:transparent;
+    font-size:28px;
+    display:block;
+    text-transform:uppercase;
+    letter-spacing:.3em;
+    position:relative;
+    animation:text_reveal .5 ease forwards;
+    animation-delay:1.5s;
+    
+}
+#hero h1:nth-child(1){
+  animation-delay:1s;
+}
+#hero h1:nth-child(2){
+  animation-delay:2s;
+}
+#hero h1:nth-child(3){
+  animation-delay:3s;
+  animation:text_reveal_name .5s ease forwards;
+}
+#hero h1 span{
+    position:absolute;
+    left:0;
+    right:0;
+    height:100%;
+    width:0;
+    background-color:#5454D4;
+    animation:text_reveal_box 1s ease;
+    animation-delay: 1s; }
+
+    #hero .hero{
+        justify-content:flex-start;
+        padding:0 50px;
+        max-width:1200px;
+        margin:0 auto;
+    }
+
+#hero h1:nth-child(1) span{
+    animation-delay:.5s
+}
+#hero h1:nth-child(2) span{
+    animation-delay:1.5s
+}
+#hero h1:nth-child(3) span{
+    animation-delay:2.5s;
+    
+}
+  #hero .amo {
+     color:white;
+     border:1px solid #5454D4;
+     padding:10px 20px;
+     position:absolute;
+     top: 30; 
+     
+    
+ }
+   
+
+#hero .amo:hover{
+    background-color:#5454D4;
+    color:white;
+    font-weight:bold;
+}
+/* start header */
+.header .logo{
+   background-color:black;
+    display:flex;
+    justify-content:space-between;
+    text-align:center;
+    align-items:center;
+    min-height:97px;
+}
+.header .logo h1{
+    font-size:40px;
+    font-weight:800;
+    border:1px solid #fff;
+    cursor:pointer;
+    padding:10px 15px;
+    margin-left:10px;
+
+}
+
+.header .logo span{
+    color:#5454D4;
+}
+.header .logo i{
+    font-size:30px;
+}
+.header .logo h1:hover{
+    background-color:#5454D4;
+    color:white;
+    border-radius:5px;
+}
+.header .logo h1 span:hover{
+    color:white;
+
+}
+.header .logo .list{
+    margin-right:30px;
+    display:flex;
+}
+.header .list ul li { 
+float:left;
+margin-right:20px;
+list-style: none;
+}
+
+.header .list ul li a{
+    color:white;
+    text-transform:uppercase;
+    padding:0 15px;
+    line-height:70px;
+    font-size:20px;
+    font-weight:bold;
+    line-height:.5em;
+    transition:.5s;
+}
+.header .list ul li a:hover,
+.header .list ul li a.active{
+    color:#5454D4;
+
+    }
+.logo{
+    color:white;
+    
+}
+
+.bar-menu{
+    display:none;
+}
+.header .list ul li:hover .bar-menu {
+   display:block;
+   position:absolute;
+   top:40px;
+   background:#5454D4;
+   margin-top:15px;
+   margin-left:-15px;
+}
+.header .list ul li:hover .bar-menu ul {
+    display:grid;
+    flex-direction: column;
+
+    
+    
+}
+/* end header */
+/* section */
+.section{
+    padding:100px;
+}
+.main-heading{
+    text-align:center;
+}
+.section .main-heading h1{
+    font-size:40px;
+    font-weight:bold;
+    line-height: 1.8;
+    text-transform:uppercase;
+    position:relative;
+    margin-bottom:30px;
+   
+}
+.section .main-heading h1::before{
+ content:" ";
+ position:absolute;
+left:50%;
+ transform:translateX(-50%);
+ height:2px;
+ width:150px;
+ background-color:#333;
+ bottom:-20px;
+ margin-bottom:10px;
+}
+.section .main-heading h1::after{
+content:"";
+position:absolute;
+left:50%;
+transform:translateX(-50%);
+width:14px;
+height:14px;
+border-radius:50%;
+border:1px solid #333;
+bottom:-19px;
+background-color:white;
+}
+.section .main-heading p{
+    color: #777;
+    text-transform: lowercase;
+    LINE-HEIGHT: 1.8em
+}
+.cards{
+    width:100%;
+    display:flex;
+    flex-wrap: nowrap;
+    height:100vh;
+    align-items:center;
+    text-align:center;
+
+}
+.cards .col{
+   padding:10px 40px;
+
+}
+.cards .col img{
+    max-width:100%;
+    width:300px;
+}
+.cards .col p{
+    text-align:center;
+    margin-top:30px;
+    color:#777;
+    line-height:1.7em;
+    font-size: medium;
+}
+.cards .col span{
+   text-align:center;
+   font-weight: 800;
+   font-size:30px;
+
+}
+.cards .col span:hover{
+    color:#5454D4;
+}
+
+/* End section */
+/* start Design */
+.design{
+    padding-top:30px;
+    padding-bottom:30px;
+    height:500px;
+    background-image:url('trésor-ensemble-de-bijoux-nuptiales-de-bel-oriental-et-indien-72246778.jpg');
+    background-size:cover;
+    display:flex;
+    align-items:center;
+    position:relative;
+    overflow: hidden;
+}
+.design::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    background-color:black;
+    opacity:.4;
+}
+.design .image,
+.design .text{
+ z-index:2;
+ position:relative;
+ flex:1;
+   
+}
+.design .text{
+    text-align:center;
+    color:white;
+}
+.design .text h2{
+    text-transform:uppercase;
+    font-weight:bold;
+    margin-bottom:40px;
+    font-size: 40px;
+
+}
+.design .text ul li{
+    list-style: none;
+
+    
+}
+.design .text ul li::before{
+    font-family:'Font Awesome 5 free';
+    content:'\F35a';
+    font-weight:800;
+    position:relative;
+    top:2px;
+    margin-right:20px;
+    margin-bottom:10px;
+    color:#5454D4;
+    font-size:27px;
+    
+}
+
+.design .image img{
+    text-align: center;
+
+}
+.design  img{
+width:250px;
+padding:0 30px;
+position:absolute;
+bottom:-60px;
+left:200px;
+}
+/* End Design */
+/*  start porftfolio */
+    .porfolio{
+        padding-top:30px;
+        padding-bottom:30px;
+    }
+     .shuffle {
+        display:flex;
+        justify-content:center;
+    }
+    .shuffle  li{
+       padding:20px;
+    }
+.shuffle .active{
+        background-color:#5454D4;
+        color:white;
+    }
+    .portfolio .box-images{
+        display:flex;
+        flex-wrap:nowrap;
+        margin-top:60px;
+
+    }
+    .portfolio .box-images .img-cards{
+
+        display:flex;
+        flex-basis:25%;
+        margin-right:30px;
+        padding-left:30px;
+
+    }
+    .portfolio .box-images .img-cards{
+        position:relative;
+    }
+
+    .portfolio .img-cards img{
+       max-width:100%;
+       transition:0.3s;
+    }
+    .portfolio .box-images .img-cards .caption{
+        position:absolute;
+        left:0;
+        bottom:-80px;
+        width:100%;
+        padding:20px;
+        background-color: #fff;
+        transition:0.3s;
+
+    }
+    .portfolio .box-images .img-cards:hover img{
+        transform:rotate(3deg) scale(1.1);
+    }
+    .portfolio .box-images .img-cards:hover .caption{
+
+     bottom:0;
+
+    }
+
+    .portfolio .box-images .img-cards .caption h4{
+        text-align:center;
+        font-weight:normal;
+
+    }
+    .portfolio .box-images .img-cards .caption p{
+        color:#5454D4;
+    }
+
+/* End portfolio */
+/* Start About us */
+.containere{
+    padding-top:50px;
+    padding-bottom:50px;
+    background-image:url('trésor-ensemble-de-bijoux-nuptiales-de-bel-oriental-et-indien-72246778.jpg');
+    background-size:cover;
+    text-align:center;
+    position:relative;
+
+
+}
+.containere .box{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;;
+}
+.containere .box .mini-box{
+    position:relative;
+    color:white;
+    margin-right:70px;
+}
+.containere .box .mini-box i{
+   width:30px;
+   height:30px;
+    background-color: black;
+   border-radius:50%;
+   display:flex;
+   align-items:center;
+   justify-content:center;
+   margin:0 auto 5px auto;
+   padding:10px;
+}
+.containere .box .mini-box .number{
+    font-size:60px;
+    margin-top:40px;
+}
+/* footer*/
+.footer{
+   
+    background-color:#111;
+
+}
+.footer .footer-content{
+    min-height:200px;
+    flex-direction: column;
+   padding-top:50px;
+   padding-bottom:10px;
+
+}
+.footer .footer-content h1{
+    text-align:center;
+    color:white;
+    font-size:40px;
+}
+.footer .footer-content h1 span{
+    color:#5454D4;
+   
+}
+.footer .footer-content h2{
+    color:white;
+    font-weight:500;
+    font-size:1.8rem;
+    letter-spacing:1rem;
+    margin-bottom:10px;
+    margin-top:10px;
+    text-align:center;
+}
+footer .footer-content .icon{
+    display:flex;
+   margin-bottom:10px;
+
+}
+.footer .icon  {
+    color:white;
+    text-align:center;
+
+}
+.footer .icon i{
+    margin-right:10px;
+    height: 20px;
+    width: 20px;
+    margin-top:20px;
+
+}
+.footer p{
+    text-align:center;
+    color:white;
+
+}
+    
+
+
+
+
+/* End footer */
+
+
+
+
+
+
+
+
+ .containere .box .mini-box p{
+     font-size:6px;
+ }
+
+/* End About us */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* keyframes */
+@keyframes text_reveal_box {
+    50%{
+        width:100%;
+       left:0;
+    }
+    100%{
+        width:0;
+       left:100%;
+    }
+}
+@keyframes text_reveal{
+    100%{
+    color: white;
+   
+}
+}
+@keyframes text_reveal_name{
+    100%{
+    color: #5454D4; 
+    font-weight:500px;
+}
+}
+
+/*  keyframes */
+
+@media (min-width:767px){
+    .header .logo i{
+        display:none
+    }
+}
+@media (max-width:767px){
+    .header .list ul {
+        display:none;
+    }
+    .header .logo .toggle-menu:hover + ul {
+        display:flex;
+        flex-direction:column;
+        position:absolute;
+       height:100;
+        left:0;
+        width:100%;
+    }
+}
+@media(max-width:767px){
+    .header .logo i{
+        position:absolute;
+       right:0;
+    }
+    .header .logo h1{
+        text-align:center;
+    }
+}
